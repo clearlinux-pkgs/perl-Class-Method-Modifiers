@@ -1,0 +1,4 @@
+2.12
+perl(Test::Fatal)
+perl(Test::Requires)
+perl(Try::Tiny)
