@@ -4,12 +4,13 @@
 #
 Name     : perl-Class-Method-Modifiers
 Version  : 2.12
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
 Summary  : 'Provides Moose-like method modifiers'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Class-Method-Modifiers-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Test::Fatal)
 BuildRequires : perl(Test::Requires)
@@ -27,6 +28,14 @@ Provides: perl-Class-Method-Modifiers-devel = %{version}-%{release}
 
 %description dev
 dev components for the perl-Class-Method-Modifiers package.
+
+
+%package license
+Summary: license components for the perl-Class-Method-Modifiers package.
+Group: Default
+
+%description license
+license components for the perl-Class-Method-Modifiers package.
 
 
 %prep
@@ -54,6 +63,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Class-Method-Modifiers
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Class-Method-Modifiers/LICENSE
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -66,8 +77,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Class/Method/Modifiers.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Class/Method/Modifiers.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Class::Method::Modifiers.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Class-Method-Modifiers/LICENSE
