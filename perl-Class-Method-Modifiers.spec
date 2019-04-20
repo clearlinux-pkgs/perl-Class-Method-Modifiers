@@ -4,10 +4,10 @@
 #
 Name     : perl-Class-Method-Modifiers
 Version  : 2.12
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
-Summary  : 'Provides Moose-like method modifiers'
+Summary  : provides Moose-like method modifiers
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Class-Method-Modifiers-license = %{version}-%{release}
@@ -25,6 +25,7 @@ Provides Moose-like method modifiers
 Summary: dev components for the perl-Class-Method-Modifiers package.
 Group: Development
 Provides: perl-Class-Method-Modifiers-devel = %{version}-%{release}
+Requires: perl-Class-Method-Modifiers = %{version}-%{release}
 
 %description dev
 dev components for the perl-Class-Method-Modifiers package.
