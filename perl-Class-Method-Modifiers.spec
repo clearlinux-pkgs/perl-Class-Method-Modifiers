@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Method-Modifiers
 Version  : 2.13
-Release  : 19
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.13.tar.gz
 Summary  : 'Provides Moose-like method modifiers'
