@@ -1,5 +1,0 @@
-2.13
-perl(Test::Fatal)
-perl(Test::Needs)
-perl(Test::Requires)
-perl(Try::Tiny)
